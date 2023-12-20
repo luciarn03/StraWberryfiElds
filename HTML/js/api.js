@@ -37,9 +37,10 @@ class Api{
             $('body').append("<video src="+fileURL+" controls></video>");
             $('body').css("background", 'no-repeat url(" https://presco.com/engineered-film/wp-content/uploads/sites/2/2019/05/markets-cinema-screens-01.jpg ") center/cover fixed');
             $('input').hide();
-            $('body').append('<p>Selecciona un archivo .srt para añadir subtítulos</p>');
-            $('body').append('<input type="file" onchange="api.readCaptions(this.files);">');
-            $('body').append('<p>Presiona "Enter" para tener pantalla completa</p>');
+            // 
+            $('body').append('<p><label for="sub">Selecciona un archivo de subtitulo (multimedia/friday.srt):</label>');
+            $('body').append('<input type="file" id="sub" onchange="api.readCaptions(this.files);">');
+            $('body').append('</p><p>Presiona "Enter" para tener pantalla completa</p>');
             
         }else{
             alert("Error : ¡¡¡ Archivo no válido !!!");
