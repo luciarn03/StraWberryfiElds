@@ -1,0 +1,82 @@
+
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+ <!-- Datos que describen el documento -->
+ <meta charset="UTF-8" />
+ <title>Escritorio Virtual - Viajes</title>
+ <meta name ="author" content ="Lucía Ruiz" />
+ <meta name ="description" content ="aquí cada documento debe tener la
+descripción del contenido concreto del mismo" />
+ <meta name ="keywords" content ="Viajes" />
+ <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+ <link rel="icon" type="img/ico" href="multimedia/favicon.ico"/>
+ <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+ <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+ <link rel="stylesheet" type="text/css" href="estilo/viajes.css" />
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+ integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+ crossorigin="anonymous"></script>
+ <script src="js/viajes.js"></script>
+
+</head>
+<!--Google Maps añade un script que da 4 warnings para HTML 5 dos de ellos sobre el atributo charset y otros dos sobre el atributo type y varios errores -->
+<body>
+<header>
+    <nav>
+        <a href= "index.html" accesskey="I" tabindex="1">Index</a>
+        <a href= "sobremi.html" accesskey="S" tabindex="2">Sobre Mi</a>
+        <a href= "noticias.html" accesskey="N" tabindex="3">Noticias</a>
+        <a href= "agenda.html" accesskey="A" tabindex="4">Agenda</a>
+        <a href= "meteorologia.html" accesskey="m" tabindex="5">Meteorologia</a>
+        <a href= "viajes.html" accesskey="V" tabindex="6">Viajes</a>
+        <a href= "juegos.html" accesskey="J" tabindex="7">Juegos</a>
+     </nav>
+ <!-- Datos con el contenido que aparece en el navegador -->
+ <h1>Escritorio Virtual - Viajes</h1>
+
+</header>
+<section>
+<h2>Fotos Etiopia</h2>
+</section>
+<section>
+    <h2>Cambio de Moneda</h2>
+    <p>Un Euro equivale a <?php $moneda = new Moneda('ETB', 'EUR');$moneda->getCambio();?> bir etiope <p>
+</section>
+<!-- mapa estatico -->
+<section id="estatico">
+    <h2>Mapa Estático</h2>
+    <button onclick="mapa.getMapaEstaticoGoogle()">Mapa Estático</button>
+</section>
+<!-- mapa dinamico -->
+<section id="mapa" data-type="dinamico">
+<h2>Mapa Dinámico</h2>
+    <button onclick="mapa.getMapaDinamico();">Mapa Dinámico</button>
+</section>
+<!-- archivos xml -->
+<section data-type="files">
+    <h2>Lectura de  XML</h2>
+    <label for="xml">XML archivos:</label>
+    <input type="file" id="xml" onchange="mapa.readInputFile(this.files);">
+</section>
+
+<!-- archivos kml -->
+<section data-type="kml">
+    <h2>Subida de varios KML</h2>
+    <label for="kml">KML archivos:</label>
+    <input type="file" id="kml" multiple onchange="mapa.readKML(this.files);">
+</section>
+<script>var mapa = new Viajes();</script>
+<section data-type="svg">
+    
+    <h2>Subida de varios SVG</h2>
+    <label for="svg">SVG archivos:</label>
+    <input type="file" id="svg" multiple onchange="mapa.readSVG(this.files);">
+</section>
+
+<script async defer
+ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9wpMt03Uu2Lj9UCAKotBJWjqWq2i5YdU"
+ ></script>
+<!--<script>mapa.getMapaDinamicoGoogle()</script>-->
+</body>
+</html>

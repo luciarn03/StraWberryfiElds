@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+ <!-- Datos que describen el documento -->
+ <meta charset="UTF-8" />
+ <title>Escritorio Virtual - Sobre Mi</title>
+ <meta name ="author" content ="Lucía Ruiz" />
+ <meta name ="description" content ="Información sobre la autora" />
+ <meta name ="keywords" content ="Informacion, Personal" />
+ <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+<link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+<link rel="icon" type="img/ico" href="multimedia/favicon.ico"/>
+
+</head>
+<body>
+   <header><!--cabecera + nav el mismo en todas las páginas-->
+    <nav>
+        <a href= "index.html" accesskey="I" tabindex="1">Index</a>
+        <a href= "sobremi.html" accesskey="S" tabindex="2">Sobre Mi</a>
+        <a href= "noticias.html" accesskey="N" tabindex="3">Noticias</a>
+        <a href= "agenda.html" accesskey="A" tabindex="4">Agenda</a>
+        <a href= "meteorologia.html" accesskey="m" tabindex="5">Meteorologia</a>
+        <a href= "viajes.php" accesskey="V" tabindex="6">Viajes</a>
+        <a href= "juegos.html" accesskey="J" tabindex="7">Juegos</a>
+     </nav>
+ 
+      <h1>Escritorio Virtual - Sobre Mi</h1>
+   </header>
+
+
+   <section>
+      <h2>Lucía Ruiz Núñez</h2>
+      <p>UO289267</p>
+      <p>uo289267@uniovi.es</p>
+      <p>Hola me llamo Lucía y actualmente estudio el tercer curso de Ingenieria del Software en la Universidad de Oviedo.</p> 
+      <picture>
+         <source  media="(max-width:465px)" srcset="multimedia/imagen_personal_movil.png">
+         <source  media="(max-width:799px)" srcset="multimedia/imagen_personal_Tablet.png">
+         <source  media="(min-width:800px)" srcset="multimedia/imagen_personal_Monitor.jpg">
+         <img src="multimedia/imagen_personal_Tablet.png" alt="Foto personal" />
+      </picture>
+      <p>El siguiente audio es el sonido de un teclado</p>
+
+      <audio controls >
+         <source src="multimedia/quick-mechanical-keyboard.wav" type = "audio/wav">
+         <source src="multimedia/quick-mechanical-keyboard.mp3" type="audio/mp3">
+      </audio>
+
+      <p>Soy de Avilés y todos los días me desplazo a Oviedo por medio de transporte público.</p>
+      <p>A continuación os dejo el enlace al primer blog que hice en secundaria, con el post sobre Obsolescencia Programada una tema que me pareció muy interesante.</p>
+      <a href="https://luciarn03.blogspot.com/2020/04/obsolescencia-programada.html">Obsolescencia programada</a>
+   </section>
+
+
+<section data-type="Aficiones">
+   <h2>Aficiones</h2>
+   <!-- lista no ordenada -->
+   <ul>
+      <li>Leer</li>
+      <li>Acariciar a mi perrita Luna</li>
+      <li>Quedar con mis amigas</li>
+      <li>Ver series y películas</li>
+      <li>Ver videos en <a href="https://www.youtube.com/">Youtube</a></li>
+   </ul>
+   <p>El siguiente video muestra escenas de la pelicula <cite>El Viaje de Chihiro</cite> una producción de <cite>Studio Ghibli</cite>. </p>
+   <video controls><!--no poner height and width-->
+      <source src="multimedia/studio-ghibli-video.mp4" type="video/mp4">
+      <source src="multimedia/studio-ghibli-video.webm" type="video/webm">
+   </video>
+
+</section>
+
+<section>
+ <h2>Gusto musical</h2>
+ <ol>
+    <li>Olivia Rodrigo</li>
+    <li>Taylor Swift</li>
+    <li>Billie Eilish</li>
+    <li>Imagine Dragons <!--Empieza el elemento con sublista-->
+      <ul><!--Comienza la sublista-->
+            <li>Dan Reynolds</li>
+            <li>Wayne Sermon</li>
+            <li>Ben McKee</li>
+            <li>Daniel Platzman</li>
+         </ul>
+      </li><!-- Acaba el elemento con sublista-->
+    <li>Tate McRae</li>
+ </ol>
+</section>
+
+<section>
+   <h2>Asignaturas favoritas</h2>
+   <dl>
+      <dt>Fundamentos Computadores y Redes</dt><dd>El profesor animó el interés por los temas explicados.La asignatura de “Fundamentos de Computadores y Redes” pertenece a la materia “Soporte Físico y Hardware” y está encuadrada dentro del módulo correspondiente al bloque común a la rama de informática. Las competencias adquiridas le permitirán al estudiante conocer el funcionamiento fundamental de los elementos hardware de los computadores: CPU, memoria y dispositivos de Entrada/Salida, además de entender cómo se representa la información en el computador y los elementos básicos para interconectar computadores formando redes.</dd>
+      <dt>Tecnología Electrónica de Computadores</dt><dd>Un interesante trabajo prático con robot.La asignatura Tecnología Electrónica de Computadores pertenece a la materia “Soporte físico y hardware” y está encuadrada dentro del módulo Común de Informática. Tiene carácter obligatorio y se imparte durante el primer semestre del segundo curso del Grado en Ingeniería Informática del Software.</dd>
+      <dt>Comunicación Persona Máquina</dt><dd>Creación de interfaces atractivas para el usuario.Esta asignatura se enmarca dentro de la materia de Interacción y Multimedia, y en el módulo Común de Informática. Se imparte a continuación de la asignatura de "Tecnología y Paradigmas de Programación" del primer semestre. A esta materia corresponden también las asignaturas de "Software y Estándares para la Web", "Realidad y Accesibilidad Aumentadas" e "Informática Audiovisual".</dd>
+      <dt>Estructura de Datos</dt><dd>Importancia de cómo ordenar la información para optimizar su acceso.Asignatura de la materia de Programación impartida durante el primer semestre del segundo curso. Cuenta con 6 créditos ECTS equivalentes a 150 horas de trabajo; 60 horas presenciales y 90 horas no presenciales.La asignatura cuenta con 2 horas de clases expositivas a la semana (hasta un total de 21 horas), 2 horas de prácticas de laboratorio semanales (hasta un total de 28 horas) a lo que se suman 7 horas semestrales de seminarios y 2 horas semestrales de tutorías grupales.</dd>
+      <dt>Computación Numérica</dt><dd>Aprendizaje sobre aproximación de funciones que resulta más realista a tener la función de antemano.La asignatura forma parte de la Materia denominada “Fundamentos Matemáticos” que incluye, además de “Computación Numérica”, las siguientes asignaturas del primer curso del Grado: Álgebra lineal, Cálculo y Estadística.</dd>
+   </dl>
+</section>
+
+<section>
+   <!--Hacer tabla accesible-->
+   <h2>Tabla</h2>
+   <p>La tabla indica la temperatura media anual de Avilés</p>
+   <table>
+      <caption>Temperaturas</caption>
+      <tr>
+         <th scope="col" id="año">Año</th>
+         <th scope="col" id="temperatura">Temperatura (°C)</th>
+      </tr>
+      <tr>
+         <th scope="row" >2012</th>
+         <td>13.8</td>
+      </tr>
+      <tr>
+         <th scope="row">2013</th>
+         <td>13.7</td>
+      </tr>
+      <tr>
+         <th scope="row">2014</th>
+         <td>14.5</td>
+      </tr>
+      <tr>
+         <th scope="row">2015</th>
+         <td>14.1</td>
+      </tr>
+      <tr>
+         <th scope="row">2016</th>
+         <td>13.8</td>
+      </tr>
+      <tr>
+         <th scope="row">2017</th>
+         <td>13.7</td>
+      </tr>
+      <tr>
+         <th scope="row">2018</th>
+         <td>13.8</td>
+      </tr>
+      <tr>
+         <th scope="row">2019</th>
+         <td>13.8</td>
+      </tr>
+      <tr>
+         <th scope="row">2020</th>
+         <td>14.3</td>
+      </tr>
+      <tr>
+         <th scope="row">2021</th>
+         <td>13.7</td>
+      </tr>
+      <tr>
+         <th scope="row">2022</th>
+         <td>14.6</td>
+      </tr>
+   </table>
+   
+</section>
+
+
+</body>
+</html>

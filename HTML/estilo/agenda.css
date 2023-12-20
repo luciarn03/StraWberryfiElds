@@ -1,0 +1,15 @@
+/*Especificidad 001*/
+section{
+    background-color: #3E2938;
+    color: white;
+    border-style: dotted;
+}
+/*Especificidad 004*/
+section ul li::marker{
+    content:'🏎️'
+}
+/*Especificidad 002*/
+section>p{
+    font-weight:800;
+    font-style: italic;
+}

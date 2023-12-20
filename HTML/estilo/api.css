@@ -1,0 +1,15 @@
+/*Especificidad 001*/
+video{
+    height: 30%;
+    width:40%;
+    display: block;
+    margin-left: auto;
+    margin-right:auto;
+    
+}
+/*Especificidad 001*/
+/*Especificidad 001*/
+p, input{
+/*El color de primer plano viene definido y herado de la hoja de estilos estilo.css*/
+   background-color: #D8C5CD;
+}

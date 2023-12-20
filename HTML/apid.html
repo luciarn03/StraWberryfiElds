@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="es"><head>
+    <!-- Datos que describen el documento -->
+    <meta charset="UTF-8">
+    <title>Escritorio Virtual - Reproductor de Videos</title>
+    <meta name="author" content="Lucía Ruiz">
+    <meta name="description" content="Reproductor de videos">
+    <meta name="keywords" content="Reproductor, Video, cine">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="icon" type="img/ico" href="multimedia/favicon.ico">
+   <link rel="stylesheet" type="text/css" href="estilo/estilo.css">
+   <link rel="stylesheet" type="text/css" href="estilo/api.css">
+   <script src="js/api.js"></script>
+   <!--Para probar el funcionamiento de esta clase recomiendo utilizar el video friday.mp4 y el documento de subtitulos friday.srt
+       encontrados en la carpeta MULTIMEDIA-->
+   </head>
+   <body style="background: url( https://presco.com/engineered-film/wp-content/uploads/sites/2/2019/05/markets-cinema-screens-01.jpg) center center / cover no-repeat fixed;">
+       <header>
+           <nav>
+               <a href="juegos.html" accesskey="J" tabindex="7">Juegos</a>
+            </nav>
+        <h1>Escritorio Virtual - Reproductor de Videos</h1>
+        
+       </header>
+       <p>
+       <label for="file">Selecciona un archivo de video (multimedia/friday.mp4):</label>
+    <input type="file" id="file" onchange="api.readInputFile(this.files);" style="display: none;">
+   </p>
+   
+   <video src="blob:http://localhost/2a60c84f-a07b-4fad-824f-6d4b989ba1d8" controls=""></video><p>Selecciona un archivo .srt para añadir subtítulos</p><input type="file" onchange="api.readCaptions(this.files);"><p>Presiona "Enter" para tener pantalla completa</p></body></html>

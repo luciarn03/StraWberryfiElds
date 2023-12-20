@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+ <!-- Datos que describen el documento -->
+ <meta charset="UTF-8" />
+ <title> Escritorio Virtual - Noticias </title>
+ <meta name ="author" content ="Lucía Ruiz" />
+ <meta name ="description" content ="Sudoku juego" />
+ <meta name ="keywords" content ="Sudoku" />
+ <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+ <link rel="icon" type="img/ico" href="multimedia/favicon.ico"/>
+ <link rel="stylesheet" type="text/css" href="estilo/sudoku.css" />
+ <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+ <script src="js/sudoku.js"></script>
+</head>
+<body>
+<header>
+    <nav>
+        <a href= "juegos.html" accesskey="J" tabindex="7">Juegos</a>
+     </nav>
+ <!-- Datos con el contenido que aparece en el navegador -->
+ <h1>Escritorio Virtual - Sudoku</h1>
+</header>
+<h2>Sudoku</h2>
+<main>
+    
+</main>
+</body>
+<script>sudoku.paintSudoku() ; window.addEventListener("keydown", sudoku.checkKey.bind(window.document, sudoku))</script>
+</html>

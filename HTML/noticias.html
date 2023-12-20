@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+ <!-- Datos que describen el documento -->
+ <meta charset="UTF-8" />
+ <title> Escritorio Virtual - Noticias </title>
+ <meta name ="author" content ="Lucía Ruiz" />
+ <meta name ="description" content ="Aqui se encuentran todo tipo de noticias" />
+ <meta name ="keywords" content ="Noticias" />
+ <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+ <link rel="icon" type="img/ico" href="multimedia/favicon.ico"/>
+ <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+ <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+ <link rel="stylesheet" type="text/css" href="estilo/noticias.css" />
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+ integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+ crossorigin="anonymous"></script>
+ <script src="js/noticias.js"></script>
+
+</head>
+<body>
+<header>
+    <nav>
+        <a href= "index.html" accesskey="I" tabindex="1">Index</a>
+        <a href= "sobremi.html" accesskey="S" tabindex="2">Sobre Mi</a>
+        <a href= "noticias.html" accesskey="N" tabindex="3">Noticias</a>
+        <a href= "agenda.html" accesskey="A" tabindex="4">Agenda</a>
+        <a href= "meteorologia.html" accesskey="m" tabindex="5">Meteorologia</a>
+        <a href= "viajes.php" accesskey="V" tabindex="6">Viajes</a>
+        <a href= "juegos.html" accesskey="J" tabindex="7">Juegos</a>
+     </nav>
+ <!-- Datos con el contenido que aparece en el navegador -->
+ <h1>Escritorio Virtual - Noticias</h1>
+</header>
+<script>var noticias = new Noticias()</script>
+<form>
+    <p>
+    <label for="file">Archivo noticias:</label>
+    <input type="file" id="file" onchange="noticias.readInputFile(this.files);">
+    </p>
+    <p>
+    <label for="titulo">Titulo:</label>
+    <input type="text" id="titulo" placeholder="Titulo">
+    </p>
+    <label for="subtitulo">Subtitulo:</label>
+    <input type="text" id="subtitulo" placeholder="Subtitulo">
+    <p>
+    <label for="texto">Texto:</label>
+    <input type="text" id="texto" placeholder="Texto">
+    </p>
+    <p>
+    <label for="autor">Autor:</label>
+    <input type="text" id="autor" placeholder="Autor">
+    </p>
+</form>
+<button onclick="noticias.añadirNoticia()">Añadir</button>
+
+
+
+</body>
+</html>

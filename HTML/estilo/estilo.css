@@ -1,0 +1,126 @@
+/*Lucía Ruiz Núñez UO289267*/
+/**
+Thunder
+#3E2938
+
+Maverick
+#D8C5CD
+
+Crail
+#BE5247
+
+Bermuda Gray
+#869ABB
+/*
+
+/*Especificidad 001*/
+body {
+    font-family: Verdana, Arial, sans-serif;
+    background-color: #D8C5CD;
+    color: black;
+}
+/*Especificidad 001*/
+header{
+    background-color: #3E2938;
+    color: white;
+}
+/*Especificidad 002*/
+nav a {
+    /*hereda background-color de header #3E2938*/
+    color: white;
+}
+/*Especificidad 002*/
+section a {
+    /*hereda background-color de header #3E2938*/
+    color: black;
+}
+/*Especificidad 001*/
+h1{
+    font-weight: 800;
+    font-size: 2.1em;
+    
+}
+/*Especificidad 001*/
+h2{
+    font-weight: 700;
+    font-size: 1.5em;
+    background-color: #869ABB;
+    color: black;
+}
+/*Especificidad 001*/
+p{
+    font-size: 0.96em;
+}
+
+/*Especifidad 012*/
+nav a:hover {
+    /*hereda background-color de header #3E2938*/
+    color : #c5cede;
+}
+/*Especificidad 014*/
+section[data-type="Aficiones"] ul li::marker{
+    content: '🌸';
+}
+/*Especificidad 004*/
+ol ul li::marker{
+    content: '🎶'; 
+}
+
+/* Especifidad: 012*/
+section[data-type="Aficiones"] ul li:nth-child(3) {
+    font-weight: 600;
+}
+/*Especificidad 002*/
+dl dt{
+    /*hereda color de body black*/
+    background-color: #869ABB;
+    font-weight: 600;
+}
+/*Especificidad 001*/
+table, th, td {
+    border-collapse: collapse;
+    letter-spacing: 0.13em;
+    text-align: center;
+    font-family: Helvetica, sans-serif
+}
+/*Especificidad 001, 011*/
+th{
+    /*hereda background-color de body D8C5CD*/
+    color:#3E2938;
+    font-weight: 600;   
+}
+
+/* Especifidad: 001*/
+img, video { 
+    max-width:100%;
+    height:auto; 
+}
+
+/*Especifidad: 011*/
+section[data-type="forecast"]{
+    /*hereda color de body black*/
+    background-color: #869ABB;
+    border : 0.01em solid black;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 50%;
+    
+}
+/*Especifidad: 015 - 015*/
+section>section ul li:nth-child(1)::marker,
+section>section ul li:nth-child(2)::marker{
+    content:'🌡️​'
+}
+/*Especifidad: 015 - 015*/
+section>section ul li:nth-child(3)::marker,
+section>section ul li:nth-child(4)::marker{
+    content:'💧'
+}
+/*Especifidad: 003*/
+section>section p{
+    font-weight: 800;
+    padding: 0.1em;
+}
+

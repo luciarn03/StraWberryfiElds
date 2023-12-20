@@ -1,0 +1,21 @@
+/*Especificidad 001*/
+header{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+@media screen and (max-width: 600px) {
+    /*Especificidad 001*/
+    nav{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    }
+    /*Especificidad 002*/
+    nav a{
+        padding-bottom: 0.9em;
+    }
+
+}

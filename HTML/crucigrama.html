@@ -1,0 +1,73 @@
+
+
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+ <!-- Datos que describen el documento -->
+ <meta charset="UTF-8" />
+ <title> Escritorio Virtual - Juegos </title>
+ <meta name ="author" content ="Lucía Ruiz" />
+ <meta name ="description" content ="Crucigrama matematico" />
+ <meta name ="keywords" content ="Crucigrama" />
+ <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+ <link rel="icon" type="img/ico" href="multimedia/favicon.ico"/>
+ <link rel="stylesheet" type="text/css" href="estilo/crucigrama.css" />
+ <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+ <script src="js/crucigrama.js"></script>
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+ integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+ crossorigin="anonymous"></script></head>
+<body>
+<header>
+    <nav>
+        <a href= "juegos.html" accesskey="J" tabindex="1">Juegos</a>
+     </nav>
+ <!-- Datos con el contenido que aparece en el navegador -->
+ <h1>Escritorio Virtual - Crucigrama Matemático</h1>
+</header>
+
+<section>
+    <h2>Crucigrama Matemático</h2>
+    <p>El objetivo de este crucigrama es completarlo en el menor tiempo posible.</p>
+    <p>Para ello haz click con el ratón o pulsa una de las casillas vacías, se pondrá de color naranja y podrás introducir el valor deseado.</p>
+    <p>Los valores son un único dígito entre el 1 y el 9 o un operador de entre los siguientes:</p>
+    <ul>
+        <li>Suma : +</li>
+        <li>Resta: -</li>
+        <li>Multiplicación: *</li>
+        <li>División: /</li>
+    </ul>
+    <p>Si utilizas tablet o móvil haz tu elección pulsando el valor en la botonera que hay justo debajo.<p>
+    <p>Si quieres borrar un valor introducido dale a la tecla de retroceso o Suprimir en teclado, o 'Borrar' en la Botonera.</p>
+</section>
+<section data-type="botonera">
+    <h2>Botonera</h2>
+    <button onclick="juego_crucigrama.introduceElement(1)">1</button>
+    <button onclick="juego_crucigrama.introduceElement(2)">2</button>
+    <button onclick="juego_crucigrama.introduceElement(3)">3</button>
+    <button onclick="juego_crucigrama.introduceElement(4)">4</button>
+    <button onclick="juego_crucigrama.introduceElement(5)">5</button>
+    <button onclick="juego_crucigrama.introduceElement(6)">6</button>
+    <button onclick="juego_crucigrama.introduceElement(7)">7</button>
+    <button onclick="juego_crucigrama.introduceElement(8)">8</button>
+    <button onclick="juego_crucigrama.introduceElement(9)">9</button>
+    <button onclick="juego_crucigrama.introduceElement('*')">*</button>
+    <button onclick="juego_crucigrama.introduceElement('+')">+</button>
+    <button onclick="juego_crucigrama.introduceElement('-')">-</button>
+    <button onclick="juego_crucigrama.introduceElement('/')">/</button>
+    <button onclick="juego_crucigrama.introduceElement('Borrar')">Borrar</button>
+</section>
+
+<section data-type="dificultades">
+    <h2>Escoja nivel de dificultad</h2>
+    <button onclick="juego_crucigrama.selectDificulty('facil')">Fácil</button>
+    <button onclick="juego_crucigrama.selectDificulty('medio')">Medio</button>
+    <button onclick="juego_crucigrama.selectDificulty('dificil')">Difícil</button>
+    <p>Dificultad actual: fácil</p>
+</section>
+<main>
+</main>
+
+<script>juego_crucigrama.paintMathword(); window.addEventListener("keydown", juego_crucigrama.checkKey.bind(window.document, juego_crucigrama))</script>
+</body>
+</html>

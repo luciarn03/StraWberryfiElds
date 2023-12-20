@@ -1,0 +1,60 @@
+/*Especificidad 001*/
+section{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+/*Especificidad 002*/
+section>h2{
+    /* flex-grow:100%; */
+    width: 100%;
+}
+/*Especificidad 001*/
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0.02em;
+}
+/*Especificidad 001*/
+article {
+    /*width: 8em;*/
+    height: 15em;
+    /* margin: 5px; */
+    transform: scale(1);
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    /*box-shadow: 0.05em 0.05em 0.05em rgba(0,0,0,.3);*/
+    width: 20%;
+    /* height: 20%; */
+    margin: 2.5%;
+}
+  /*Especificidad 011*//*Especificidad 011*/
+article[data-state="flipped"], article[data-state="revealed"] {
+    transform: rotateY(180deg);
+}
+
+/*Especificidad 002*/
+article h3,
+/*Especificidad 002*/
+article img {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 0.8em;
+    /*Color de primer plano es el negro y viene heredado del body de la hoja de estilos estilos.css que se usa en conjunto con esta*/
+    background: #1C7CCC;
+    backface-visibility: hidden;
+}
+/*Especificidad 002*/
+article h3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+/*Especificidad 002*/
+article img {
+    transform: rotateY(180deg);
+}
